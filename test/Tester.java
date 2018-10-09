@@ -5,8 +5,17 @@ import java.io.*;
 
 public class Tester
 {
-
 	public static void main(String[] args)
+	{
+		MyRunnable runnable = new MyRunnable();
+		
+		runnable.start(7);
+		runnable.join();
+		System.out.println(runnable.getI());
+	}
+	
+	
+	public static void testSerializeObject()
 	{
 		MyClass class1 = new MyClass(1, 1.1f, "one");
 		MyClass class2 = new MyClass(2, 2.2f, "two");
